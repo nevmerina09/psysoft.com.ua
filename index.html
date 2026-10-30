@@ -11,7 +11,7 @@
     <meta name="description" content="ПсіСофт (PsySoft CRM) — спеціалізована програма та CRM-система для психологів та психотерапевтів. Автоматизація протоколів, розкладу, оплат та домашніх завдань з повною конфіденційністю.">
     <meta name="keywords" content="PsySoft, Psy Soft, ПсіСофт, Псі Софт, псісофт срм, psysoft crm, CRM для психологів, софт для психотерапевтів, програма для психолога, картотека клієнтів психолога, вести клієнтів психологу">
     
-    <!-- Favicon: Світлий квадрат із заокругленими кутами та градієнтною літерою Ψ -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='psiGrad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366f1'/><stop offset='50%' stop-color='%23a855f7'/><stop offset='100%' stop-color='%23ec4899'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23f8fafc'/><path d='M 28,30 C 28,50 43,58 43,58 L 43,74 L 31,74 C 29,74 29,78 31,78 L 69,78 C 71,78 71,74 69,74 L 57,74 L 57,58 C 57,58 72,50 72,30 C 72,27 67,27 67,30 C 67,45 57,51 57,51 L 57,22 C 57,19 43,19 43,22 L 43,51 C 43,51 33,45 33,30 C 33,27 28,27 28,30 Z' fill='url(%23psiGrad)'/></svg>">
 
     <!-- Open Graph for Social Media Sharing -->
@@ -29,7 +29,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Точкове виправлення горизонтального скролу для мобільних пристроїв */
         html, body {
             max-width: 100% !important;
             overflow-x: hidden !important;
@@ -65,7 +64,7 @@
 </head>
 <body class="bg-slate-900 text-slate-100 antialiased selection:bg-purple-900 selection:text-purple-100 relative overflow-x-hidden">
 
-    <!-- Soft Ambient Glows (Muted Colors) -->
+    <!-- Soft Ambient Glows -->
     <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-purple-900/20 via-rose-900/15 to-slate-800/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
     <div class="absolute top-96 left-1/4 w-[400px] h-[300px] bg-purple-950/30 blur-[100px] rounded-full pointer-events-none -z-10"></div>
 
@@ -76,11 +75,10 @@
     <!-- Header / Navigation -->
     <header class="border-b border-purple-950/60 bg-slate-900/90 backdrop-blur fixed w-full top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Left: Logo (Підтягує картинку з папки assets) -->
+            <!-- Left: Logo -->
             <div class="flex items-center space-x-3">
                 <a href="#" class="flex items-center space-x-3">
                     <img src="assets/logo-share.png" alt="PsySoft Logo" class="w-10 h-10 object-contain rounded-xl shadow-md border border-purple-400/20" onerror="this.onerror=null; this.style.display='none'; document.getElementById('fallback-logo').style.display='flex';">
-                    <!-- Резервний логотип на випадок затримки завантаження файлу -->
                     <div id="fallback-logo" class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-800 via-rose-800 to-slate-800 items-center justify-center shadow-md border border-purple-400/20 text-white font-bold text-lg" style="display:none;">
                         Ψ
                     </div>
@@ -95,9 +93,9 @@
                 </div>
             </div>
 
-            <!-- Right: CTA Button -->
-            <a href="https://t.me/real_psy_soft_bot" target="_blank" class="text-sm font-semibold bg-gradient-to-r from-purple-800 to-rose-800 hover:from-purple-700 hover:to-rose-700 text-purple-100 px-5 py-2 rounded-xl transition shadow-md border border-purple-400/20">
-                Спробувати безкоштовно
+            <!-- Right: CTA Button (Веде на Google Форму фокус-групи) -->
+            <a href="https://forms.gle/Z3gvPsc4RCymPJqs6" target="_blank" class="text-sm font-semibold bg-gradient-to-r from-purple-800 to-rose-800 hover:from-purple-700 hover:to-rose-700 text-purple-100 px-5 py-2 rounded-xl transition shadow-md border border-purple-400/20">
+                💬 У фокус-групу
             </a>
         </div>
     </header>
@@ -120,9 +118,13 @@
             ПсіСофт — це автоматизація практики для тих, хто цінує структуру, час та вигорає від адміністративної рутини. Поверніть свій фокус на терапевтичний процес.
         </p>
 
+        <!-- Дві кнопки: Google Форма фокус-групи + чат-бот Early Birds -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+            <a href="https://forms.gle/Z3gvPsc4RCymPJqs6" target="_blank" class="w-full sm:w-auto text-base font-semibold bg-slate-800 hover:bg-slate-700 text-purple-100 px-7 py-4 rounded-2xl transition shadow-lg border border-purple-400/30 flex items-center justify-center space-x-2">
+                <span>💬 Хочу у фокус-групу</span>
+            </a>
             <a href="https://t.me/real_psy_soft_bot" target="_blank" class="w-full sm:w-auto text-base font-semibold bg-gradient-to-r from-purple-800 via-rose-800 to-purple-900 hover:from-purple-700 hover:to-rose-700 text-white px-8 py-4 rounded-2xl transition shadow-lg border border-purple-400/20 flex items-center justify-center space-x-2">
-                <span>🚀 Спробувати 7 днів безкоштовно</span>
+                <span>🚀 Забронювати Early Birds</span>
             </a>
         </div>
         <p class="text-xs text-slate-400">Без прив'язки картки • Запуск за 3 хвилини • Повний контроль над даними</p>
@@ -238,7 +240,7 @@
                 <li class="flex items-center gap-2">✅ <span>Персональний супровід від авторки</span></li>
             </ul>
 
-            <!-- CTA Button -->
+            <!-- CTA Button (Веде у чат-бот для Early Birds) -->
             <a href="https://t.me/real_psy_soft_bot" target="_blank" class="block w-full py-4 bg-gradient-to-r from-purple-800 via-rose-800 to-purple-900 hover:from-purple-700 hover:to-rose-700 text-white font-semibold rounded-2xl transition shadow-lg border border-purple-400/20">
                 Розпочати 7 днів безкоштовно
             </a>
@@ -270,8 +272,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-purple-950/60 py-8 px-4 text-center text-xs text-slate-500">
-        <p>© 2026 PsySoft CRM (ПсіСофт). Всі права захищено. Створено для психологів із любов'ю до терапії.</p>
+    <footer class="py-8 border-t border-purple-950/60 text-center text-xs text-slate-500 bg-slate-950">
+        <p>© 2026 PsySoft CRM. Всі права захищені.</p>
     </footer>
 
 </body>
