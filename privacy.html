@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Політика конфіденційності — PsySoft (ПсіСофт)</title>
-    <meta name="robots" content="index,follow">
+    
+    <!-- Favicon (Лотос / Символ Ψ як на головній) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='psiGrad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366f1'/><stop offset='50%' stop-color='%23a855f7'/><stop offset='100%' stop-color='%23ec4899'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23f8fafc'/><path d='M 28,30 C 28,50 43,58 43,58 L 43,74 L 31,74 C 29,74 29,78 31,78 L 69,78 C 71,78 71,74 69,74 L 57,74 L 57,58 C 57,58 72,50 72,30 C 72,27 67,27 67,30 C 67,45 57,51 57,51 L 57,22 C 57,19 43,19 43,22 L 43,51 C 43,51 33,45 33,30 C 33,27 28,27 28,30 Z' fill='url(%23psiGrad)'/></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,44 +16,97 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased selection:bg-purple-900 selection:text-purple-100">
+<body class="bg-slate-900 text-slate-100 antialiased min-h-screen flex flex-col justify-between">
 
-    <main class="max-w-3xl mx-auto px-4 py-12">
-        <p class="mb-8"><a href="/" class="text-sm text-purple-300 hover:text-rose-200">← На головну</a></p>
+    <!-- Header / Navigation -->
+    <header class="border-b border-purple-950/60 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-800 via-rose-800 to-slate-800 flex items-center justify-center shadow-md border border-purple-400/20 text-white font-bold text-base">
+                    Ψ
+                </div>
+                <span class="text-xl font-bold bg-gradient-to-r from-purple-200 via-rose-200 to-slate-100 bg-clip-text text-transparent">PsySoft</span>
+            </a>
+            <a href="/" class="text-xs text-slate-400 hover:text-purple-300 transition flex items-center gap-1">
+                ← Повернутися на головну
+            </a>
+        </div>
+    </header>
 
-        <h1 class="text-3xl font-bold mb-2">🛡️ PsySoft: Безпека даних та умови використання</h1>
-        <p class="text-sm text-slate-400 mb-8">Останнє оновлення: Листопад 2026</p>
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 py-12 flex-grow">
+        <h1 class="text-3xl font-bold text-white mb-2">Політика конфіденційності та захисту даних</h1>
+        <p class="text-xs text-slate-400 mb-8">Останнє оновлення: 2026 рік</p>
 
-        <div class="space-y-4 leading-relaxed text-slate-300">
-            <p>Сервіс PsySoft призначений для автоматизації робочих процесів, ведення графіків та структурування нотаток фахівців у сфері ментального здоров'я.</p>
+        <div class="space-y-8 text-sm text-slate-300 leading-relaxed">
+            
+            <section class="bg-slate-800/30 border border-purple-950/60 p-6 rounded-2xl">
+                <h2 class="text-lg font-semibold text-white mb-3">1. Загальні положення</h2>
+                <p>
+                    Платформа <strong>PsySoft (ПсіСофт)</strong> створена з першочерговим пріоритетом збереження терапевтичної таємниці, безпеки даних фахівців та їхніх клієнтів. Ми дотримуємося принципів мінімізації збору даних та максимальної локалізації збереження інформації.
+                </p>
+            </section>
 
-            <h2 class="text-xl font-semibold text-slate-100 pt-4">1. Суверенітет даних та зберігання</h2>
-            <p>· Усі клієнтські картки, розклади та сформовані тексти зберігаються виключно у вашому особистому просторі Notion (Workspace), доступ до якого маєте лише ви.</p>
-            <p>· PsySoft виконує функцію технічного інструменту передачі та обробки даних. Сервіс не накопичує, не продає та не аналізує ваші клінічні нотатки для власних цілей.</p>
-            <p>· Зберігання даних у Notion регулюється умовами безпеки та приватності платформи Notion Labs, Inc.</p>
+            <section class="bg-slate-800/30 border border-purple-950/60 p-6 rounded-2xl">
+                <h2 class="text-lg font-semibold text-white mb-3">2. Принцип зберігання даних та локалізація</h2>
+                <ul class="list-disc list-inside space-y-2 text-slate-300">
+                    <li>Всі клінічні нотатки, протоколи сесій та персональні дані клієнтів зберігаються виключно у вашому зашифрованому особистому просторі (базі даних користувача).</li>
+                    <li>Сервер PsySoft не використовує дані терапевтичних сесій для навчання сторонніх AI-моделей.</li>
+                    <li>Аудіозаписи сесій не зберігаються на публічних або відкритих серверах.</li>
+                </ul>
+            </section>
 
-            <h2 class="text-xl font-semibold text-slate-100 pt-4">2. Захист даних при роботі з ШІ (OpenAI API)</h2>
-            <p>· Для обробки голосових нотаток та генерації чернеток документів використовується закритий корпоративний API OpenAI.</p>
-            <p>· Відсутність навчання моделей: Відповідно до умов використання OpenAI API, надіслані дані не використовуються для навчання чи покращення публічних моделей штучного інтелекту.</p>
-            <p>· Очищення та збереження логів: Голосові файли видаляються негайно після транскрибації. Згідно з політикою безпеки OpenAI API, текстові запити можуть тимчасово зберігатися у зашифрованих системних журналах модерації до 30 днів для запобігання зловживанням, після чого автоматично видаляються.</p>
+            <section class="bg-slate-800/30 border border-purple-950/60 p-6 rounded-2xl">
+                <h2 class="text-lg font-semibold text-white mb-3">3. Використання OpenAI API</h2>
+                <p>
+                    Для транскрибації та допомоги у структуруванні протоколів сесій використовується офіційний API OpenAI. Згідно з офіційними умовами OpenAI API (Enterprise & API Privacy Terms), дані, надіслані через API, <strong>не використовуються для тренування публічних моделей OpenAI</strong> і видаляються з систем обробки після завершення запиту.
+                </p>
+            </section>
 
-            <h2 class="text-xl font-semibold text-slate-100 pt-4">3. Обов'язок знеособлення (De-identification)</h2>
-            <p>· Згідно з етичними кодексами та законодавством про захист персональних даних, Фахівець зобов’язується не передавати в сервіс прямі ідентифікатори клієнтів (повні прізвища, документи, адреси).</p>
-            <p>· Використовуйте лише імена, ініціали або внутрішні кодові ID. Відповідальність за дотримання професійної таємниці та деідентифікацію даних перед надсиланням у сервіс покладається на Фахівця.</p>
+            <section class="bg-slate-800/30 border border-purple-950/60 p-6 rounded-2xl">
+                <h2 class="text-lg font-semibold text-white mb-3">4. Захист інформації</h2>
+                <p>
+                    Ми застосовуємо сучасні стандарти шифрування під час передачі даних (SSL/TLS). Доступ до вашого акаунту захищено персональною автентифікацією. Користувач несе відповідальність за збереження своїх доступів у безпеці.
+                </p>
+            </section>
 
-            <h2 class="text-xl font-semibold text-slate-100 pt-4">4. Автономія та припинення користування</h2>
-            <p>· Ви володієте повним контролем над вашим інтегрованим простором.</p>
-            <p>· У будь-який момент ви можете відкликати доступ токена PsySoft у налаштуваннях Notion чи зупинити бота. Всі раніше створені записи залишаються у вашому Notion-просторі.</p>
+            <!-- Форма зворотного зв'язку / Служба підтримки -->
+            <section class="bg-slate-800/50 border border-purple-900/60 p-6 md:p-8 rounded-3xl shadow-lg mt-10">
+                <h2 class="text-xl font-bold text-white mb-2 text-center">Служба підтримки та запити щодо даних</h2>
+                <p class="text-xs text-slate-400 mb-6 text-center">
+                    Якщо у вас виникли запитання щодо конфіденційності, роботи сервісу або видалення даних, ви можете надіслати нам повідомлення через форму нижче.
+                </p>
 
-            <h2 class="text-xl font-semibold text-slate-100 pt-4">5. Обмеження відповідальності</h2>
-            <p>· Сервіс надається для допомоги в організації практики. PsySoft не надає медичних чи психологічних послуг і не несе відповідальності за зміст документів, згенерованих фахівцем на основі чернеток ШІ.</p>
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                    <input type="hidden" name="apikey" value="a35278ad-c3ef-40b5-8ef0-47dad08c5f10">
+                    <input type="hidden" name="subject" value="Новий запит із сторінки Політики Конфіденційності PsySoft">
 
-            <h2 class="text-xl font-semibold text-slate-100 pt-4">📩 Підтримка та зв'язок</h2>
-            <p>З питань технічної підтримки та конфіденційності звертайтеся до нашого бота підтримки в Telegram: <a href="https://t.me/real_psy_soft_bot. " target="_blank" class="text-purple-300 underline hover:text-rose-200">@PsySoft_bot</a></p>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Ваше ім'я</label>
+                        <input type="text" name="name" required class="w-full bg-slate-900/90 border border-purple-950 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-purple-600 transition" placeholder="Ірина">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Ваш Email або Telegram для відповіді</label>
+                        <input type="text" name="email_or_telegram" required class="w-full bg-slate-900/90 border border-purple-950 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-purple-600 transition" placeholder="@username або email@example.com">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Повідомлення</label>
+                        <textarea name="message" rows="4" required class="w-full bg-slate-900/90 border border-purple-950 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-purple-600 transition resize-none" placeholder="Ваше запитання щодо конфіденційності чи сервісу..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-800 via-rose-800 to-purple-900 hover:from-purple-700 hover:to-rose-700 text-white font-semibold rounded-xl transition shadow-md border border-purple-400/20 text-sm">
+                        Надіслати звернення
+                    </button>
+                </form>
+            </section>
+
         </div>
     </main>
 
-    <footer class="py-8 border-t border-purple-950/60 text-center text-xs text-slate-500 bg-slate-950">
+    <!-- Footer -->
+    <footer class="py-6 border-t border-purple-950/60 text-center text-xs text-slate-500 bg-slate-950">
         <p>© 2026 PsySoft CRM. Всі права захищені.</p>
     </footer>
 
